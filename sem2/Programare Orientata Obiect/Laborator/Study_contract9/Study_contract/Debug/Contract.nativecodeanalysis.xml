@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Subject', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Subject::{ctor}</FUNCTION>
+    <DECORATED>??0Subject@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>DTO::{ctor}</FUNCTION>
+    <DECORATED>??0DTO@@QAE@XZ</DECORATED>
+    <FUNCLINE>73</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>contract.cpp</FILENAME>
+      <LINE>33</LINE>
+      <COLUMN>25</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Contract::generate_contract</FUNCTION>
+    <DECORATED>?generate_contract@Contract@@QAEXH@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>contract.cpp</FILENAME>
+      <LINE>24</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts (type.4).</DESCRIPTION>
+    <FUNCTION>Contract::generate_contract</FUNCTION>
+    <DECORATED>?generate_contract@Contract@@QAEXH@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>contract.cpp</FILENAME>
+      <LINE>31</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts (type.4).</DESCRIPTION>
+    <FUNCTION>Contract::generate_contract</FUNCTION>
+    <DECORATED>?generate_contract@Contract@@QAEXH@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>contract.cpp</FILENAME>
+      <LINE>34</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26486</DEFECTCODE>
+    <DESCRIPTION>Don't pass a pointer that may be invalid to a function. Parameter 0 '(34's result)' in call to 'std::vector&lt;Subject,std::allocator&lt;Subject&gt; &gt;::erase' may be invalid (lifetime.3).</DESCRIPTION>
+    <FUNCTION>Contract::generate_contract</FUNCTION>
+    <DECORATED>?generate_contract@Contract@@QAEXH@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+        <FILENAME>contract.cpp</FILENAME>
+        <LINE>34</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

@@ -1,0 +1,5 @@
+﻿  main.c
+C:\Users\rmari\Desktop\Facultate\Programare Orientata Obiect\Laborator\Lab 1 v2\Lab 1 v2\main.c(30,12): warning C4098: 'pb_9': 'void' function returning a value
+C:\Users\rmari\Desktop\Facultate\Programare Orientata Obiect\Laborator\Lab 1 v2\Lab 1 v2\main.c(36,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\rmari\Desktop\Facultate\Programare Orientata Obiect\Laborator\Lab 1 v2\Lab 1 v2\main.c(27,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Lab 1 v2.vcxproj -> C:\Users\rmari\Desktop\Facultate\Programare Orientata Obiect\Laborator\Lab 1 v2\Debug\Lab 1 v2.exe

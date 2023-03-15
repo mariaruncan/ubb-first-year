@@ -1,0 +1,18 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (StudyContractGUI.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (StudyContractGUI.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018: The "ListQrc" task failed unexpectedly.
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018: System.IO.FileNotFoundException: Could not find file 'D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudyContractGUI - 13\StudyContractGUI\GUI.qrc'.
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018: File name: 'D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudyContractGUI - 13\StudyContractGUI\GUI.qrc'
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.Xml.XmlTextReaderImpl.FinishInitUriString()
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at System.Xml.Linq.XDocument.Load(String uri, LoadOptions options)
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at InlineCode.ListQrc.Execute() in c:\Users\rmari\AppData\Local\Temp\ygiyg4aq.0.cs:line 60
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskExecutionHost.Microsoft.Build.BackEnd.ITaskExecutionHost.Execute()
+C:\Users\rmari\AppData\Local\QtMsBuild\rcc\qtrcc.targets(113,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskBuilder.<ExecuteInstantiatedTask>d__26.MoveNext()

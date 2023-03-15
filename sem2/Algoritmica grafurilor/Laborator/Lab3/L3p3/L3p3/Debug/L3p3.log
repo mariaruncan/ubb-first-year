@@ -1,0 +1,5 @@
+﻿  main.cpp
+D:\Facultate\Semestrul 2\Algoritmica grafurilor\Laborator\Lab3\L3p3\L3p3\main.cpp(31,20): warning C4018: '<': signed/unsigned mismatch
+D:\Facultate\Semestrul 2\Algoritmica grafurilor\Laborator\Lab3\L3p3\L3p3\main.cpp(33,22): warning C4018: '<': signed/unsigned mismatch
+D:\Facultate\Semestrul 2\Algoritmica grafurilor\Laborator\Lab3\L3p3\L3p3\main.cpp(63,20): warning C4018: '<': signed/unsigned mismatch
+  L3p3.vcxproj -> D:\Facultate\Semestrul 2\Algoritmica grafurilor\Laborator\Lab3\L3p3\Debug\L3p3.exe

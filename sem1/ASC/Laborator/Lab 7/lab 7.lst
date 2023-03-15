@@ -1,0 +1,38 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 32343638                    a1 db '24','68'    
+    15 00000004 18004400                    a2 dw 24,68
+    16 00000008 02040608                    a3 db 2,4,6,8
+    17 0000000C [04]                        a4 db a2
+    17          ******************       error: OBJ format can only handle 16- or 32-byte relocations
+    18 0000000D 0200040006000800            a5 dw 2,4,6,8
+    19                                      ;a6 db 2468h     ; - syntax error
+    20 00000015 [0A00]                      a7 dw a3+2
+    21                                      ;a8 db 2 and 1b ; - syntax error
+    22                                      ;a9 db 3 or 5    ; - syntax error
+    23 00000017 24006800                    a10 dw 24h,68h
+    24 0000001B 08060402                    a11 dd 02040608h
+    25 0000001F [08000000]                  a12 dd a3
+    26 00000023 2468                        a13 db 24h,68h
+    27 00000025 6824                        a14 dw 2468h
+    28                                  
+    29                                  
+    30                                  ; our code starts here
+    31                                  segment code use32 class=code
+    32                                      start:
+    33                                          ; ...
+    34                                      
+    35                                          ; exit(0)
+    36 00000000 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    37 00000002 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (L4p3.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  L4p3+p4.cpp
+D:\Facultate\Semestrul 2\Algoritmica grafurilor\Laborator\Lab4\L4p3\L4p3\L4p3+p4.cpp(93,31): warning C4018: '<': signed/unsigned mismatch
+  L4p3.vcxproj -> D:\Facultate\Semestrul 2\Algoritmica grafurilor\Laborator\Lab4\L4p3\Debug\L4p3+p4.exe

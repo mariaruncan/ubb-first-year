@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Subject', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Subject::{ctor}</FUNCTION>
+    <DECORATED>??0Subject@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>DTO::{ctor}</FUNCTION>
+    <DECORATED>??0DTO@@QAE@XZ</DECORATED>
+    <FUNCLINE>73</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>file_repo.h</FILENAME>
+      <LINE>49</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class FileRepo', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>FileRepo::{dtor}</FUNCTION>
+    <DECORATED>??1FileRepo@@QAE@XZ</DECORATED>
+    <FUNCLINE>49</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>repository.h</FILENAME>
+      <LINE>50</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class SubjectRepo', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>SubjectRepo::{dtor}</FUNCTION>
+    <DECORATED>??1SubjectRepo@@QAE@XZ</DECORATED>
+    <FUNCLINE>50</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>undo.h</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Actiune_undo', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Actiune_undo::{dtor}</FUNCTION>
+    <DECORATED>??1Actiune_undo@@UAE@XZ</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.h</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Service', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Service::{dtor}</FUNCTION>
+    <DECORATED>??1Service@@QAE@XZ</DECORATED>
+    <FUNCLINE>47</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.h</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26457</DEFECTCODE>
+    <DESCRIPTION>(void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).</DESCRIPTION>
+    <FUNCTION>Service::{dtor}</FUNCTION>
+    <DECORATED>??1Service@@QAE@XZ</DECORATED>
+    <FUNCLINE>47</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

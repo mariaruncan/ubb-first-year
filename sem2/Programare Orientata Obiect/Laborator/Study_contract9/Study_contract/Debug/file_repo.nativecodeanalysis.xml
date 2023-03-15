@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Subject', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Subject::{ctor}</FUNCTION>
+    <DECORATED>??0Subject@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>DTO::{ctor}</FUNCTION>
+    <DECORATED>??0DTO@@QAE@XZ</DECORATED>
+    <FUNCLINE>73</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>file_repo.h</FILENAME>
+      <LINE>49</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class FileRepo', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>FileRepo::{dtor}</FUNCTION>
+    <DECORATED>??1FileRepo@@QAE@XZ</DECORATED>
+    <FUNCLINE>49</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>repository.h</FILENAME>
+      <LINE>50</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class SubjectRepo', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>SubjectRepo::{dtor}</FUNCTION>
+    <DECORATED>??1SubjectRepo@@QAE@XZ</DECORATED>
+    <FUNCLINE>50</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>file_repo.cpp</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26436</DEFECTCODE>
+    <DESCRIPTION>The type 'class FileRepo' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
+    <FUNCTION>FileRepo::add_subject</FUNCTION>
+    <DECORATED>?add_subject@FileRepo@@UAEXABVSubject@@@Z</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

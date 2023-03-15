@@ -1,0 +1,13 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (StudySontractGUI.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(519,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (StudySontractGUI.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ContractGUI.cpp
+  GUI.cpp
+  contract.cpp
+  file_repo.cpp
+  main.cpp
+  repository.cpp
+  service.cpp
+  tests.cpp
+  StudySontractGUI.vcxproj -> D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudySontractGUI\x64\Debug\StudyContractGUI.exe
+  windeployqt: "C:/Qt/6.1.0/msvc2019_64/bin\windeployqt.exe" --list target --dir "D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudySontractGUI\x64\Debug\\" "D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudySontractGUI\x64\Debug\StudyContractGUI.exe"
+EXEC : warning : Cannot find Visual Studio installation directory, VCINSTALLDIR is not set.

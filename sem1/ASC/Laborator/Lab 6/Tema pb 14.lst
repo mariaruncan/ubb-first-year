@@ -1,0 +1,72 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; Se da un sir S de dublucuvinte.
+    14                                      ; Sa se obtina sirul D format din octetii dublucuvintelor din sirul D sortati in ordine crescatoare in interpretarea fara semn.
+    15                                      ; Exemplu:
+    16                                      ; s DD 12345607h, 1A2B3C15h
+    17                                      ; d DB 07h, 12h, 15h, 1Ah, 2Bh, 34h, 3Ch, 56h
+    18 00000000 07563412153C2B1A            s dd 12345607h, 1A2B3C15h
+    19                                      len equ ($-s)/4        ; lungimea lui s (octeti)
+    20 00000008 <res 00000002>              d resb len
+    21                                      
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25 00000000 BE[00000000]                    MOV ESI, s
+    26 00000005 BF[08000000]                    MOV EDI, d          ; d este sirul destinatie
+    27 0000000A FC                              CLD                 ; DF=0 - parcurgem de la stanga la dreapta
+    28 0000000B B902000000                      MOV ECX, len
+    29                                          
+    30                                          Muta_octeti:
+    31 00000010 89CB                                MOV EBX, ECX    ; salvam valoarea din ecx
+    32 00000012 B108                                MOV CL, 8
+    33 00000014 AD                                  LODSD           ; in eax avem un element
+    34 00000015 AA                                  STOSB           ; stocam in [edi] ocetetul din al si incrementam edi 
+    35 00000016 D3E8                                SHR EAX, CL     ; shiftam eax pt a obtine urmatorul octet si apoi il stocam in d, cele doua intructiuni fiind repetate de 3 ori
+    36 00000018 AA                                  STOSB
+    37 00000019 D3E8                                SHR EAX, CL
+    38 0000001B AA                                  STOSB
+    39 0000001C D3E8                                SHR EAX, CL
+    40 0000001E AA                                  STOSB
+    41 0000001F 89D9                                MOV ECX, EBX    ; ecx revine la valoarea sa de dinaintea shiftarilor
+    42 00000021 E2ED                            LOOP Muta_octeti
+    43                                          
+    44 00000023 B907000000                      MOV ECX, len*4-1    ; in ecx avem indexul ultimului elem din sirul nesortat
+    45 00000028 BE00000000                      MOV ESI, 0          ; d este sir sursa si folosim ESI ca si contor
+    46                                          
+    47                                          Bubble_sort:
+    48 0000002D 39F1                                CMP ECX, ESI  
+    49 0000002F 7422                                JZ Pass         ; daca ne aflam cu adresa ESI pe ultimul elem din sir, Pass            
+    50 00000031 8A86[08000000]                      MOV AL, [d+ESI]
+    51 00000037 8A9E[09000000]                      MOV BL, [d+ESI+1]
+    52 0000003D 38D8                                CMP AL, BL
+    53 0000003F 7703                                JA Swap         ; jump if AL>BL <=> octet1>octet2
+    54 00000041 46                                  INC ESI
+    55 00000042 EBE9                                JMP Bubble_sort
+    56                                              
+    57                                              Swap:
+    58 00000044 889E[08000000]                          MOV [d+ESI], BL
+    59 0000004A 8886[09000000]                          MOV [d+ESI+1], AL
+    60 00000050 46                                      INC ESI
+    61 00000051 EBDA                                    JMP Bubble_sort
+    62                                                  
+    63                                              Pass:
+    64 00000053 BE00000000                              MOV ESI, 0
+    65 00000058 49                                      DEC ECX         ; revenim cu contorul la 0 si vom parcurge sirul pana la elementul cu indexul ecx-1, deoarece elem cu indexul ecx este pe pozitia corespunzatoare
+    66 00000059 83F900                                  CMP ECX, 0
+    67 0000005C 75CF                                    JNZ Bubble_sort  ; daca ecx este diferit de 0, adica avem cel putin 2 elem in sir ce trebuie sortate in continuare, ne intoarcem la Bubble_sort 
+    68                                                  
+    69                                                  
+    70                                          
+    71 0000005E 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    72 00000060 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

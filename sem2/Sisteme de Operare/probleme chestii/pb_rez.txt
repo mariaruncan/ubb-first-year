@@ -1,0 +1,59 @@
+// Scrieti un program C care primeste n fisiere ca argumente in linia de
+// comanda. Programul va crea n thread-uri, alocate dinamic in memorie, fiecare
+// thread va contoriza in 2 variabile globale numarul de litere mari si suma
+// cifrelor din fisierele date ca si argument, fiecare thread va procesa
+// un singur fisier, primit ca argument. Accesul ca variabilele globale se va
+// face sincronizat, folosind variabile mutex.
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <pthread.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+int n = 0;
+int M = 0;
+int s = 0;
+pthread_mutex_t mtx1;
+pthread_mutex_t mtx2;
+
+void *functie(void* a){
+        int f;
+        f = open((char *)a, O_RDONLY);
+        char ch;
+        while(read(f, &ch, sizeof(char)) > 0) {
+                if(ch >= '0' && ch <= '9'){
+                        pthread_mutex_lock(&mtx1);
+                        s = s + ch - '0';
+                        pthread_mutex_unlock(&mtx1);
+                }
+                else if(ch >= 'A' && ch <= 'Z'){
+                        pthread_mutex_lock(&mtx2);
+                        M++;
+                        pthread_mutex_unlock(&mtx2);
+                }
+        }
+        close(f);
+        return 0;
+}
+
+int main(int argc, char** argv){
+        n = argc - 1;
+        pthread_t *t;
+        t = malloc(n * sizeof(pthread_t));
+        pthread_mutex_init(&mtx1, NULL);
+        pthread_mutex_init(&mtx2, NULL);
+        int i;
+        for(i = 0; i < n; i++) {
+                pthread_create(&t[i], NULL, functie, (void *)argv[i + 1]);
+        }
+        for(i = 0; i < n; i++) {
+                pthread_join(t[i], NULL);
+        }
+        pthread_mutex_destroy(&mtx1);
+        pthread_mutex_destroy(&mtx2);
+        free(t);
+        printf("Litere mari: %d\nSuma cifrelor: %d\n", M, s);
+        return 0;
+}

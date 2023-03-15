@@ -1,0 +1,6 @@
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract\Debug\Study_contract.exe.lastcodeanalysissucceeded
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract\Study_contract\Debug\NativeCodeAnalysis.read.1.tlog
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Lab 6 - 7\Study_contract\Debug\Study_contract.exe.lastcodeanalysissucceeded
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Lab 6 - 7\Study_contract\Study_contract\Debug\NativeCodeAnalysis.read.1.tlog
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Debug\Study_contract.exe.lastcodeanalysissucceeded
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\Debug\NativeCodeAnalysis.read.1.tlog

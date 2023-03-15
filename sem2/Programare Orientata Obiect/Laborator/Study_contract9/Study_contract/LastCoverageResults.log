@@ -1,0 +1,22 @@
+[2021-04-26 12:24:31] [info] Start Program:
+Path:"D:\\Facultate\\Semestrul 2\\Programare Orientata Obiect\\Laborator\\Study_contract9\\Debug\\Study_contract.exe"
+Arguments:
+Working directory: "D:\\Facultate\\Semestrul 2\\Programare Orientata Obiect\\Laborator\\Study_contract9\\Study_contract"
+Modules: Selected: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Debug\Study_contract.exe Excluded: 
+Sources: Selected: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\rmari\AppData\Local\Temp\z002de5b.ry5 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2021-04-26 12:24:31] [info] Module: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Debug\Study_contract.exe is selected because it matches selected pattern: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Debug\Study_contract.exe
+[2021-04-26 12:25:28] [info] ----------------------------------------------------
+[2021-04-26 12:25:28] [info] Coverage binary generated in file: C:\Users\rmari\AppData\Local\Temp\z002de5b.ry5
+[2021-04-26 12:25:28] [info] ----------------------------------------------------
+[2021-04-26 12:25:28] [error] Your program stop with error code: 1

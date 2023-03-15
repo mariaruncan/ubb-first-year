@@ -1,0 +1,6 @@
+Scrieti un program C care primeste n fisiere ca argumente in linia de
+comanda. Programul va crea n thread-uri, alocate dinamic in memorie, fiecare
+thread va contoriza in 2 variabile globale numarul de litere mari si suma
+cifrelor din fisierele date ca si argument, fiecare thread va procesa
+un singur fisier, primit ca argument. Accesul ca variabilele globale se va
+face sincronizat, folosind variabile mutex.

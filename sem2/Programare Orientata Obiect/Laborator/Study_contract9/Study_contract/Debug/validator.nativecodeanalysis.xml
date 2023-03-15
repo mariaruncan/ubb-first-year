@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Subject', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Subject::{ctor}</FUNCTION>
+    <DECORATED>??0Subject@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>DTO::{ctor}</FUNCTION>
+    <DECORATED>??0DTO@@QAE@XZ</DECORATED>
+    <FUNCLINE>73</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>validator.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Validator::validate_subject</FUNCTION>
+    <DECORATED>?validate_subject@Validator@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>validator.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Validator::validate_subject</FUNCTION>
+    <DECORATED>?validate_subject@Validator@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>validator.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Validator::validate_subject</FUNCTION>
+    <DECORATED>?validate_subject@Validator@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

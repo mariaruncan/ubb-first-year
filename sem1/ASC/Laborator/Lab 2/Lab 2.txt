@@ -1,0 +1,61 @@
+MUL operand
+
+rezultat <- operand * operand2
+
+1) operand este de tipul byte
+
+AL=operand2
+AX=rezultat
+
+2) operand este de tipul word
+
+AX=operand2
+DX:AX=rezultat (in AX se regaseste partea low din rezultat
+iar in DX se regaseste partea high din rezultat)
+
+3) operand este de tipul doubleword
+
+EAX=operand2
+EDX:EAX=rezultat (in EAX se regaseste partea low din rezultat
+iar in EDX se regaseste partea high din rezultat)
+--------------------------------------------------
+
+DIV operand
+
+deimpartit / operand = cat r rest
+
+1) operand este de tipul byte
+
+AX=deimpartit
+=> AL=cat; AH = rest
+
+2) operand este de tipul word
+
+DX:AX=deimpartit
+=> AX=cat; DX=rest
+
+3) operand este de tipul doubleword
+
+EDX:EAX=deimpartit
+=> EAX=cat; EDX=rest
+
+1000 / 2 ( 1) word / byte = byte r byte)
+1000 / 2 = 500 r 0 => AL=500 si AH = 0 => Fals!
+octet: 8 biti
+interpretarea fara semn:
+minima: 00000000b => 0
+maxima: 11111111b => 255
+
+Solutie:
+
+1000 / 2 ( 2) doubleword / word = word r word)
+1000 / 2 = 500 r 0 => AX=500 si DX = 0 OK!
+-------------------------------------------------
+
+ex. MUL AX (AX*AX=DX:AX => AX^2)
+
+-------------------------------------------------
+
+; AX=0001h
+NEG AX; AX=FFFFh
+MUL AL; AL^2=255 * 255

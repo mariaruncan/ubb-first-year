@@ -1,0 +1,123 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, fopen, fprintf, fclose               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import fopen msvcrt.dll
+    11                                  import fclose msvcrt.dll
+    12                                  import fprintf msvcrt.dll
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; a. Se dau doua siruri de cuvinte a si b. Sa se obtina sirul c astfel:
+    16                                          ; - concatenati sirul octetilor low din primul sir cu sirul octetilor high din al doilea sir.
+    17                                          ; - sirul c se va ordona crescator
+    18                                          ; - numerele din siruri se vor interpreta cu semn
+    19                                          ; - afisati sirul c (numere in baza 16)
+    20                                          ; Exemplu:
+    21                                          ; a = 1234h,5678h,90h
+    22                                          ; b = 4h,0abcdh,10h,1122h
+    23                                          ; c = 34h, 78h, 90h, 00h, 0abh, 00h, 11h -> 00h, 00h, 11h, 34h, 78h, 90h, 0abh
+    24 00000000 341278569000                a dw 1234h, 5678h, 90h
+    25                                      len_a equ ($-a)/2
+    26 00000006 0400CDAB10002211            b dw 4h,0abcdh,10h,1122h
+    27                                      len_b equ ($-b)/2
+    28 0000000E <res 00000007>              c resb len_a + len_b
+    29 00000015 257800                      format db "%x", 0
+    30 00000018 6F75747075742E7478-         nume_fisier db "output.txt", 0
+    30 00000021 7400               
+    31 00000023 6100                        mod_acces db "a", 0
+    32 00000025 00000000                    descriptor_fisier dd 0
+    33                                      
+    34                                  ; our code starts here
+    35                                  segment code use32 class=code
+    36                                      start:
+    37 00000000 B903000000                      mov ecx, len_a
+    38 00000005 E30F                            jecxz pass1
+    39                                          
+    40 00000007 BE[00000000]                    mov esi, a
+    41 0000000C BF[0E000000]                    mov edi, c
+    42                                          
+    43                                          octeti_low_a:
+    44 00000011 66AD                                lodsw       ; esi=esi+2
+    45 00000013 AA                                  stosb       ; edi=edi+1
+    46 00000014 E2FB                            loop octeti_low_a
+    47                                          
+    48                                          pass1:
+    49                                          
+    50 00000016 B904000000                      mov ecx, len_b
+    51 0000001B E311                            jecxz pass2
+    52                                          
+    53 0000001D BE[06000000]                    mov esi, b
+    54                                          
+    55                                          octeti_high_b:
+    56 00000022 66AD                                lodsw       ; esi=esi+2
+    57 00000024 51                                  push ecx
+    58 00000025 B108                                mov cl, 8
+    59 00000027 66D3E8                              shr ax, cl  ; rotim bitii lui ax cu 8 poz ca in al sa fie octetul high din ax
+    60 0000002A AA                                  stosb       ; edi=edi+1
+    61 0000002B 59                                  pop ecx
+    62 0000002C E2F4                            loop octeti_high_b
+    63                                          
+    64                                          pass2:
+    65                                          
+    66 0000002E B201                            mov dl, 1       ; DL=variabila semafor pentru verificare daca sirul este sortati; DL=1 pt sir neosrtat, altfel DL=0 
+    67                                      
+    68                                          bubble_sort:
+    69 00000030 80FA00                              cmp dl, 0
+    70 00000033 7421                                jz sfarsit_bubble_sort
+    71 00000035 B200                                mov dl, 0
+    72 00000037 B906000000                          mov ecx, len_a+len_b-1            
+    73 0000003C BE[0E000000]                        mov esi, c              ; acum c este sir sursa
+    74                                              comparare:
+    75 00000041 8A06                                    mov al, [esi]
+    76 00000043 8A5E01                                  mov bl, [esi+1]
+    77 00000046 38D8                                    cmp al, bl          ; comparam doua elemente consecutive ale sirului
+    78 00000048 7607                                    jbe pass3
+    79 0000004A 881E                                    mov [esi], bl
+    80 0000004C 884601                                  mov [esi+1], al     ; in caz ca el1>el2, le interschimbam si DL devine 1
+    81 0000004F B201                                    mov dl, 1
+    82                                              
+    83                                              pass3:
+    84 00000051 46                                      inc esi
+    85 00000052 E2ED                                loop comparare
+    86                                          
+    87 00000054 EBDA                            jmp bubble_sort
+    88                                          
+    89                                          sfarsit_bubble_sort:
+    90                                          
+    91 00000056 68[23000000]                    push dword mod_acces
+    92 0000005B 68[18000000]                    push dword nume_fisier
+    93 00000060 FF15[00000000]                  call [fopen]
+    94 00000066 83C408                          add esp, 4*2
+    95                                          
+    96 00000069 A3[25000000]                    mov [descriptor_fisier], eax
+    97                                          
+    98 0000006E B907000000                      mov ecx, len_a+len_b
+    99 00000073 BE00000000                      mov esi, 0
+   100                                          
+   101                                          afisare:
+   102 00000078 51                                  push ecx
+   103                                          
+   104 00000079 BB00000000                          mov ebx, 0
+   105 0000007E 8A9E[0E000000]                      mov bl, [c+esi]
+   106                                              
+   107 00000084 53                                  push ebx
+   108 00000085 68[15000000]                        push dword format
+   109 0000008A FF35[25000000]                      push dword [descriptor_fisier]
+   110 00000090 FF15[00000000]                      call [fprintf]
+   111 00000096 83C40C                              add esp, 4*3
+   112                                            
+   113 00000099 46                                  inc esi
+   114 0000009A 59                                  pop ecx
+   115 0000009B E2DB                            loop afisare
+   116                                          
+   117 0000009D FF35[25000000]                  push dword [descriptor_fisier]
+   118 000000A3 FF15[00000000]                  call [fclose]
+   119 000000A9 83C404                          add esp, 4*1
+   120                                         ; exit(0)
+   121 000000AC 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   122 000000AE FF15[00000000]                  call    [exit]       ; call exit to terminate the program

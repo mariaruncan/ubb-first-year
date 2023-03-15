@@ -1,0 +1,4 @@
+﻿  main.cpp
+  Practic_oop.vcxproj -> C:\Users\rmari\Desktop\Practic_oop\x64\Debug\Practic_oop.exe
+  windeployqt: "C:/Qt/6.1.0/msvc2019_64/bin\windeployqt.exe" --list target --dir C:\Users\rmari\Desktop\Practic_oop\x64\Debug\ C:\Users\rmari\Desktop\Practic_oop\x64\Debug\Practic_oop.exe
+EXEC : warning : Cannot find Visual Studio installation directory, VCINSTALLDIR is not set.

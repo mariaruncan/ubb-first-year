@@ -1,0 +1,21 @@
+[2021-05-24 12:00:20] [info] Start Program:
+Path:"D:\\Facultate\\Semestrul 2\\Programare Orientata Obiect\\Laborator\\StudyContractGUI - 13\\x64\\Debug\\StudyContractGUI - 13.exe"
+Arguments:
+Working directory: "D:\\Facultate\\Semestrul 2\\Programare Orientata Obiect\\Laborator\\StudyContractGUI - 13\\StudyContractGUI"
+Modules: Selected: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudyContractGUI - 13\x64\Debug\StudyContractGUI - 13.exe Excluded: 
+Sources: Selected: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudyContractGUI - 13\StudyContractGUI Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\rmari\AppData\Local\Temp\msunbywd.djn 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2021-05-24 12:00:21] [info] Module: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudyContractGUI - 13\x64\Debug\StudyContractGUI - 13.exe is selected because it matches selected pattern: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudyContractGUI - 13\x64\Debug\StudyContractGUI - 13.exe
+[2021-05-24 12:00:21] [info] ----------------------------------------------------
+[2021-05-24 12:00:21] [info] Coverage binary generated in file: C:\Users\rmari\AppData\Local\Temp\msunbywd.djn
+[2021-05-24 12:00:21] [info] ----------------------------------------------------

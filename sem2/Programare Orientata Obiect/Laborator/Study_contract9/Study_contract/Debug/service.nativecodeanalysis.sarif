@@ -1,0 +1,486 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26432",
+          "message": {
+            "text": "If you define or delete any default operation in the type 'class Subject', define or delete them all (c.21)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/domain.h"
+                },
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 2,
+                  "endLine": 37,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0Subject@@QAE@ABV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26455",
+          "message": {
+            "text": "Default constructor may not throw. Declare it 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/domain.h"
+                },
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 2,
+                  "endLine": 73,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0DTO@@QAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26432",
+          "message": {
+            "text": "If you define or delete any default operation in the type 'class FileRepo', define or delete them all (c.21)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/file_repo.h"
+                },
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 3,
+                  "endLine": 49,
+                  "endColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??1FileRepo@@QAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26432",
+          "message": {
+            "text": "If you define or delete any default operation in the type 'class SubjectRepo', define or delete them all (c.21)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/repository.h"
+                },
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 3,
+                  "endLine": 50,
+                  "endColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??1SubjectRepo@@QAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26432",
+          "message": {
+            "text": "If you define or delete any default operation in the type 'class Actiune_undo', define or delete them all (c.21)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/undo.h"
+                },
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 11,
+                  "endLine": 41,
+                  "endColumn": 11
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??1Actiune_undo@@UAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26432",
+          "message": {
+            "text": "If you define or delete any default operation in the type 'class Service', define or delete them all (c.21)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.h"
+                },
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 3,
+                  "endLine": 47,
+                  "endColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??1Service@@QAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26457",
+          "message": {
+            "text": "(void) should not be used to ignore return values, use 'std::ignore =' instead (es.48)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.h"
+                },
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 3,
+                  "endLine": 48,
+                  "endColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??1Service@@QAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26409",
+          "message": {
+            "text": "Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.cpp"
+                },
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 37
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?add_subject@Service@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26409",
+          "message": {
+            "text": "Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.cpp"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?delete_subject@Service@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26409",
+          "message": {
+            "text": "Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.cpp"
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?update_subject@Service@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26440",
+          "message": {
+            "text": "Function '<lambda_2cc77eed28ad6f84ceeef3b34ba8a229>::operator()' can be declared 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.cpp"
+                },
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 4,
+                  "endLine": 63,
+                  "endColumn": 4
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??R<lambda_2cc77eed28ad6f84ceeef3b34ba8a229>@@QBE_NABVSubject@@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26429",
+          "message": {
+            "text": "Symbol 'act' is never tested for nullness, it can be marked as not_null (f.23)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.cpp"
+                },
+                "region": {
+                  "startLine": 123,
+                  "startColumn": 15,
+                  "endLine": 123,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?undo@Service@@QAEXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.28.29915.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00DEB1C0 -il C:\\Users\\rmari\\AppData\\Local\\Temp\\_CL_9e114713ast -typedil -f service.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1928 -D_MSC_FULL_VER=192829915 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 4 -WX -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -std:c++17 -FoDebug\\service.obj -FdDebug\\vc142.pdb -Gd -analyze:projectdirectory D:\\Facultate\\Semestrul 2\\Programare Orientata Obiect\\Laborator\\Study_contract9\\Study_contract -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset combo.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\cppwinrt -I D:\\Facultate\\Semestrul 2\\Programare Orientata Obiect\\Laborator\\Study_contract9\\Study_contract\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/domain.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "c46c7f7a50b4cc6af3241e9e20eb106b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/file_repo.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "fc7cbcb68d9b565fce4e70c154a396fe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/repository.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "06f1a6c28d4c96a05497623c7d94a6f3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/undo.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "8f2c1cf2236024e101db5347cb125b88"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "b8a484794b687742657d6b96ca1a7a76"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/facultate/semestrul 2/programare orientata obiect/laborator/study_contract9/study_contract/ui.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "3b74117ca32b3e35e386ffb629cb15ac"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/facultate/semestrul 2/programare orientata obiect/laborator/study_contract9/study_contract/ui.h"
+          },
+          "hashes": {
+            "md5": "edbc1f72532a2b25f2b43a549f896569"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/facultate/semestrul 2/programare orientata obiect/laborator/study_contract9/study_contract/repolab.h"
+          },
+          "hashes": {
+            "md5": "fdc7e3ff969943594d28265db74724f6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/facultate/semestrul 2/programare orientata obiect/laborator/study_contract9/study_contract/validator.h"
+          },
+          "hashes": {
+            "md5": "701877ae3e749e653511903c641d9fd3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/facultate/semestrul 2/programare orientata obiect/laborator/study_contract9/study_contract/contract.h"
+          },
+          "hashes": {
+            "md5": "b5f4e302963ba827f628b3063a6fdef3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/tests.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "1d18b541324edc31de68c8d812739833"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/facultate/semestrul 2/programare orientata obiect/laborator/study_contract9/study_contract/tests.h"
+          },
+          "hashes": {
+            "md5": "68c79c2501efd3ec7ee65120eb561122"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///D:/Facultate/Semestrul 2/Programare Orientata Obiect/Laborator/Study_contract9/Study_contract/service.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "763dd8a4c91ac93587f9271aa275b021"
+          }
+        }
+      ]
+    }
+  ]
+}

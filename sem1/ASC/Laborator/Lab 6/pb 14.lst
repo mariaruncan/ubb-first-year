@@ -1,0 +1,60 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; Se da un sir S de dublucuvinte.
+    14                                      ; Sa se obtina sirul D format din octetii dublucuvintelor din sirul S sortati in ordine crescatoare in interpretarea fara semn.
+    15 00000000 07563412153C2B10            S dd 12345607h, 102B3C15h
+    16                                      l equ $-S
+    17 00000008 00<rept>                    D times l db 0
+    18                                      
+    19                                  ; our code starts here
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ;
+    23 00000000 BE[00000000]                MOV ESI, S
+    24 00000005 BF[08000000]                MOV EDI, D
+    25 0000000A FC                          CLD             ; DF=0
+    26 0000000B B908000000                  MOV ECX, l      ; l=nr de octeti din S
+    27                                      
+    28 00000010 F3A4                        rep MOVSB       ; muta octetii din S in D
+    29                                      
+    30                                      ; algoritm de sortare
+    31                                      
+    32 00000012 B201                        MOV DL, 1       ; DL=variabila semafor pentru verificare daca sirul este sortati; DL=1 pt sir neosrtat, altfel DL=0 
+    33                                      
+    34                                      Bubble_sort:
+    35 00000014 80FA00                          CMP DL, 0
+    36 00000017 7421                            JZ Sfarsit
+    37 00000019 B200                            MOV DL, 0
+    38 0000001B B907000000                      MOV ECX, l-1            ; in loop Comparare facem l-1 comparari
+    39 00000020 BE[08000000]                    MOV ESI, D              ; acum D este sir sursa
+    40                                          Comparare:
+    41 00000025 8A06                                MOV AL, [ESI]
+    42 00000027 8A5E01                              MOV BL, [ESI+1]
+    43 0000002A 38D8                                CMP AL, BL          ; comparam doua elemente consecutive ale sirului
+    44 0000002C 7607                                JBE Pass
+    45 0000002E 881E                                MOV [ESI], BL
+    46 00000030 884601                              MOV [ESI+1], AL     ; in caz ca el1>el2, le interschimbam si DL devine 1
+    47 00000033 B201                                MOV DL, 1
+    48                                              
+    49                                              Pass:
+    50 00000035 46                                      INC ESI
+    51 00000036 E2ED                            LOOP Comparare
+    52                                          
+    53 00000038 EBDA                            JMP Bubble_sort
+    54                                          
+    55                                      Sfarsit:
+    56                                  
+    57                                  
+    58                                          ; exit(0)
+    59 0000003A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    60 0000003C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

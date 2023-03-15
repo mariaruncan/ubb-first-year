@@ -1,0 +1,116 @@
+EDX:EAX+
+ECX:EBX
+-------
+EDX+ECX+CF:EAX+EBX
+
+add EAX,EBX
+adc EDX,ECX
+
+EDX:EAX-
+ECX:EBX
+-------
+EDX-ECX-CF:EAX-EBX
+
+sub EAX,EBX
+sbb EDX,ECX
+
+MUL si DIV - op de inmultire / impartire
+in interpretarea fara semn
+IMUL si IDIV - op de inmultire / impartire
+in interpretarea cu semn
+ex.
+
+MOV AX, 0FFFFh
+MUL AL; AX = AL * AL = 255 * 255 = ....
+; AL = 0FFh = 255
+
+MOV AX, 0FFFFh
+IMUL AL; AX = AL * AL = (-1) * (-1) = 1
+; AL = 0FFh = 11111111b = - 1
+; complement: 00000001b
+
+MOV AL, -1
+MUL AL; AX = AL * AL = 255 * 255
+; AL = 0FFh = 11111111b = 255
+
+MOV AL, -1
+IMUL AL; AX = AL * AL = (-1) * (-1)
+; AL = 0FFh = 11111111b = -1
+
+MOV AX, 0080h
+DIV AL; AX / AL = 128 / 128 = 1 r 0
+; AX = 0080h = 8*16 = 128
+; AL = 80h = 8*16 = 128
+
+MOV AX, 0080h
+IDIV AL; AX / AL = 128 / (-128) = -1 r 0
+; AX = 0080h = 8*16 = 128
+; AL = 80h = 10000000b = - 128
+; complement: 10000000b = 128
+
+Conversii:
+
+Interpretarea fara semn
+- 8 biti => 16 biti - pun in p. high 0-uri nesemnificative
+AL => AX => mov AH,0
+BL => BX => mov BH,0
+- 16 biti => 32 biti - pun in p. high 0-uri nesemnificative
+AX => DX:AX =>
+mov DX,0
+AX => EAX =>
+mov BX,AX
+mov EAX,0
+mov AX,BX
+push word 0
+push AX
+pop EAX
+- 32 biti => 64 biti - pun in p. high 0-uri nesemnificative
+DX:AX => EDX:EAX =>
+push DX
+push AX
+pop EAX
+mov EDX,0
+EAX => EDX:EAX => mov EDX, 0
+
+Interpretarea cu semn - pun in p.high 0-uri sau 1-uri in functie de bitul de semn
+- 8 biti => 16 biti
+CBW (convert byte to word)
+!!! AL => AX
+- 16 biti => 32 biti
+CWD (convert word to double)
+!!! AX => DX:AX
+CWDE (convert word to double extended)
+!!! AX => EAX
+- 32 biti => 64 biti
+CDQ (convert double to quad)
+
+-----------------------------------------------------------------------------------------------
+; a - doubleword; b, d - byte; c - word; e - qword
+; a + b / c - d * 2 - e
+
+a - doubleword
+
+b - byte => word => doubleword
+c - word
+b / c => word
+
+d - byte
+d * 2 => word
+
+b / c - d * 2 => word => doubleword
+
+a + b / c - d * 2 => doubleword => qword
+
+cx:bx+
+a => dx:ax
+------
+
+cx:bx => ebx+
+a => eax
+------
+
+mov eax,[a]
+push cx
+push bx
+pop ebx
+add eax,ebx

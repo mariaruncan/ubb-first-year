@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>37</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Subject', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Subject::{ctor}</FUNCTION>
+    <DECORATED>??0Subject@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>37</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>domain.h</FILENAME>
+      <LINE>73</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26455</DEFECTCODE>
+    <DESCRIPTION>Default constructor may not throw. Declare it 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>DTO::{ctor}</FUNCTION>
+    <DECORATED>??0DTO@@QAE@XZ</DECORATED>
+    <FUNCLINE>73</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>contract.cpp</FILENAME>
+      <LINE>33</LINE>
+      <COLUMN>25</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Contract::generate_contract</FUNCTION>
+    <DECORATED>?generate_contract@Contract@@QAEXH@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>contract.cpp</FILENAME>
+      <LINE>24</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts (type.4).</DESCRIPTION>
+    <FUNCTION>Contract::generate_contract</FUNCTION>
+    <DECORATED>?generate_contract@Contract@@QAEXH@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>contract.cpp</FILENAME>
+      <LINE>31</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>26493</DEFECTCODE>
+    <DESCRIPTION>Don't use C-style casts (type.4).</DESCRIPTION>
+    <FUNCTION>Contract::generate_contract</FUNCTION>
+    <DECORATED>?generate_contract@Contract@@QAEXH@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>contract.cpp</FILENAME>
+      <LINE>34</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>26486</DEFECTCODE>
+    <DESCRIPTION>Don't pass a pointer that may be invalid to a function. Parameter 0 '(34's result)' in call to 'std::vector&lt;Subject,std::allocator&lt;Subject&gt; &gt;::erase' may be invalid (lifetime.3).</DESCRIPTION>
+    <FUNCTION>Contract::generate_contract</FUNCTION>
+    <DECORATED>?generate_contract@Contract@@QAEXH@Z</DECORATED>
+    <FUNCLINE>21</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+        <FILENAME>contract.cpp</FILENAME>
+        <LINE>34</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>file_repo.h</FILENAME>
+      <LINE>49</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class FileRepo', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>FileRepo::{dtor}</FUNCTION>
+    <DECORATED>??1FileRepo@@QAE@XZ</DECORATED>
+    <FUNCLINE>49</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>repository.h</FILENAME>
+      <LINE>50</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class SubjectRepo', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>SubjectRepo::{dtor}</FUNCTION>
+    <DECORATED>??1SubjectRepo@@QAE@XZ</DECORATED>
+    <FUNCLINE>50</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>file_repo.cpp</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26436</DEFECTCODE>
+    <DESCRIPTION>The type 'class FileRepo' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
+    <FUNCTION>FileRepo::add_subject</FUNCTION>
+    <DECORATED>?add_subject@FileRepo@@UAEXABVSubject@@@Z</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>undo.h</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Actiune_undo', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Actiune_undo::{dtor}</FUNCTION>
+    <DECORATED>??1Actiune_undo@@UAE@XZ</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.h</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26432</DEFECTCODE>
+    <DESCRIPTION>If you define or delete any default operation in the type 'class Service', define or delete them all (c.21).</DESCRIPTION>
+    <FUNCTION>Service::{dtor}</FUNCTION>
+    <DECORATED>??1Service@@QAE@XZ</DECORATED>
+    <FUNCLINE>47</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.h</FILENAME>
+      <LINE>48</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26457</DEFECTCODE>
+    <DESCRIPTION>(void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).</DESCRIPTION>
+    <FUNCTION>Service::{dtor}</FUNCTION>
+    <DECORATED>??1Service@@QAE@XZ</DECORATED>
+    <FUNCLINE>47</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>4</LINE>
+      <COLUMN>18</COLUMN>
+    </SFA>
+    <DEFECTCODE>26436</DEFECTCODE>
+    <DESCRIPTION>The type 'class SubjectRepo' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).</DESCRIPTION>
+    <FUNCTION>SubjectRepo::add_subject</FUNCTION>
+    <DECORATED>?add_subject@SubjectRepo@@UAEXABVSubject@@@Z</DECORATED>
+    <FUNCLINE>4</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>32</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26489</DEFECTCODE>
+    <DESCRIPTION>Don't dereference a pointer that may be invalid: 'allotemp.7'. '(temporary 7)' may have been invalidated at line 32 (lifetime.1).</DESCRIPTION>
+    <FUNCTION>SubjectRepo::find_subject</FUNCTION>
+    <DECORATED>?find_subject@SubjectRepo@@UAEABVSubject@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>29</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+        <FILENAME>repository.cpp</FILENAME>
+        <LINE>32</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>repository.cpp</FILENAME>
+      <LINE>32</LINE>
+      <COLUMN>2</COLUMN>
+    </SFA>
+    <DEFECTCODE>26487</DEFECTCODE>
+    <DESCRIPTION>Don't return a pointer '(29's result)' that may be invalid (lifetime.4).</DESCRIPTION>
+    <FUNCTION>SubjectRepo::find_subject</FUNCTION>
+    <DECORATED>?find_subject@SubjectRepo@@UAEABVSubject@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>29</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+        <FILENAME>repository.cpp</FILENAME>
+        <LINE>32</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>36</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>Service::add_subject</FUNCTION>
+    <DECORATED>?add_subject@Service@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.cpp</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>Service::delete_subject</FUNCTION>
+    <DECORATED>?delete_subject@Service@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>11</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.cpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>26409</DEFECTCODE>
+    <DESCRIPTION>Avoid calling new and delete explicitly, use std::make_unique&lt;T&gt; instead (r.11).</DESCRIPTION>
+    <FUNCTION>Service::update_subject</FUNCTION>
+    <DECORATED>?update_subject@Service@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z</DECORATED>
+    <FUNCLINE>19</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.cpp</FILENAME>
+      <LINE>63</LINE>
+      <COLUMN>3</COLUMN>
+    </SFA>
+    <DEFECTCODE>26440</DEFECTCODE>
+    <DESCRIPTION>Function '&lt;lambda_2cc77eed28ad6f84ceeef3b34ba8a229&gt;::operator()' can be declared 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>Service::sort_list::&lt;lambda_2cc77eed28ad6f84ceeef3b34ba8a229&gt;::()</FUNCTION>
+    <DECORATED>??R&lt;lambda_2cc77eed28ad6f84ceeef3b34ba8a229&gt;@@QBE_NABVSubject@@0@Z</DECORATED>
+    <FUNCLINE>63</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>service.cpp</FILENAME>
+      <LINE>123</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26429</DEFECTCODE>
+    <DESCRIPTION>Symbol 'act' is never tested for nullness, it can be marked as not_null (f.23).</DESCRIPTION>
+    <FUNCTION>Service::undo</FUNCTION>
+    <DECORATED>?undo@Service@@QAEXXZ</DECORATED>
+    <FUNCLINE>119</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>56</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_repository</FUNCTION>
+    <DECORATED>?test_repository@@YAXXZ</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>57</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_repository</FUNCTION>
+    <DECORATED>?test_repository@@YAXXZ</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>233</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>234</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>235</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>238</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>239</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>240</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>243</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>244</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>245</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_sort</FUNCTION>
+    <DECORATED>?test_sort@@YAXXZ</DECORATED>
+    <FUNCLINE>222</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>259</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_filter</FUNCTION>
+    <DECORATED>?test_filter@@YAXXZ</DECORATED>
+    <FUNCLINE>248</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>260</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_filter</FUNCTION>
+    <DECORATED>?test_filter@@YAXXZ</DECORATED>
+    <FUNCLINE>248</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>267</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_filter</FUNCTION>
+    <DECORATED>?test_filter@@YAXXZ</DECORATED>
+    <FUNCLINE>248</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>268</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_filter</FUNCTION>
+    <DECORATED>?test_filter@@YAXXZ</DECORATED>
+    <FUNCLINE>248</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>301</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_contract</FUNCTION>
+    <DECORATED>?test_contract@@YAXXZ</DECORATED>
+    <FUNCLINE>274</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>346</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_file_repo</FUNCTION>
+    <DECORATED>?test_file_repo@@YAXXZ</DECORATED>
+    <FUNCLINE>335</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>347</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_file_repo</FUNCTION>
+    <DECORATED>?test_file_repo@@YAXXZ</DECORATED>
+    <FUNCLINE>335</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>348</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_file_repo</FUNCTION>
+    <DECORATED>?test_file_repo@@YAXXZ</DECORATED>
+    <FUNCLINE>335</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>350</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_file_repo</FUNCTION>
+    <DECORATED>?test_file_repo@@YAXXZ</DECORATED>
+    <FUNCLINE>335</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>tests.cpp</FILENAME>
+      <LINE>353</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>test_file_repo</FUNCTION>
+    <DECORATED>?test_file_repo@@YAXXZ</DECORATED>
+    <FUNCLINE>335</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>validator.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Validator::validate_subject</FUNCTION>
+    <DECORATED>?validate_subject@Validator@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>validator.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Validator::validate_subject</FUNCTION>
+    <DECORATED>?validate_subject@Validator@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\</FILEPATH>
+      <FILENAME>validator.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26446</DEFECTCODE>
+    <DESCRIPTION>Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).</DESCRIPTION>
+    <FUNCTION>Validator::validate_subject</FUNCTION>
+    <DECORATED>?validate_subject@Validator@@QAEXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

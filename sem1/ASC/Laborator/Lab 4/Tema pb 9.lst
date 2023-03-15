@@ -1,0 +1,72 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; Se de cuvantul A si octetul B. Sa se obtina dublucuvantul C astfel:
+    14                                      ; bitii 0-3 ai lui C coincid cu bitii 6-9 ai lui A
+    15                                      ; bitii 4-5 ai lui C au valoarea 1
+    16                                      ; bitii 6-7 ai lui C coincid cu bitii 1-2 ai lui B
+    17                                      ; bitii 8-23 ai lui C coincid cu bitii lui A
+    18                                      ; bitii 24-31 ai lui C coincid cu bitii lui B
+    19                                   
+    20 00000000 50AF                        a DW 1010111101010000b
+    21 00000002 D6                          b DB 11010110b
+    22 00000003 <res 00000004>              c RESD 1
+    23                                      
+    24                                  ; our code starts here
+    25                                  segment code use32 class=code
+    26                                      start:
+    27                                          ; c = b7 b6 b5 b4 b3 b2 b1 b0    a15 a14 a13 a12 a11 a10 a9 a8   a7 a6 a5 a4 a3 a2 a1 a0    b2 b1 1 1 a9 a8 a7 a6
+    28 00000000 BB00000000                  MOV EBX, 0                 ; in EBX calculam rezultatul
+    29                                      
+    30                                      
+    31 00000005 B800000000                  MOV EAX, 0
+    32 0000000A 66A1[00000000]              MOV AX, [a]                ; izolam bitii 6-9 ai lui a
+    33 00000010 6625C003                    AND AX, 0000001111000000b  ; AX = 0 0 0 0 0 0 a9 a8    a7 a6 0 0 0 0 0 0 
+    34 00000014 B106                        MOV CL, 6
+    35 00000016 66D3C8                      ROR AX, CL                 ; rotim 6 poz spre dreapta   AX = 0 0 0 0 0 0 0 0   0 0 0 0 a9 a8 a7 a6
+    36 00000019 09C3                        OR EBX, EAX                ; punem bitii in rezultat    EBX = 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0   0 0 0 0 a9 a8 a7 a6
+    37                                  
+    38                                      
+    39 0000001B 80CB30                      OR BL, 00110000b           ; facem bitii 4-5 din rezultat sa aiba valoarea 1
+    40                                                                 ; EBX = 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0   0 0 1 1 a9 a8 a7 a6
+    41                                      
+    42                                      
+    43 0000001E B800000000                  MOV EAX, 0
+    44 00000023 A0[02000000]                MOV AL, [b]                ; izolam bitii 1-2 ai lui b
+    45 00000028 2406                        AND AL, 00000110b          ; AL = 0 0 0 0 0 b2 b1 0
+    46 0000002A B105                        MOV CL, 5
+    47 0000002C D2C0                        ROL AL, CL                 ; rotim 5 poz spre stanga   AL = b2 b1 0 0 0 0 0 0
+    48 0000002E 09C3                        OR EBX, EAX                ; punem bitii in rezultat   EBX = 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0   b2 b1 1 1 a9 a8 a7 a6
+    49                                      
+    50                                      
+    51 00000030 B800000000                  MOV EAX, 0
+    52 00000035 66A1[00000000]              MOV AX, [a]                ; EAX = 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0   a15 a14 a13 a12 a11 a10 a9 a8    a7 a6 a5 a4 a3 a2 a1 a0
+    53 0000003B B108                        MOV CL, 8
+    54 0000003D D3C0                        ROL EAX, CL                ; rotim 8 poz spre stanga
+    55                                                                 ; EAX = 0 0 0 0 0 0 0 0   a15 a14 a13 a12 a11 a10 a9 a8    a7 a6 a5 a4 a3 a2 a1 a0   0 0 0 0 0 0 0 0
+    56 0000003F 09C3                        OR EBX, EAX                ; punem bitii in rezultat  
+    57                                                                 ; EBX = 0 0 0 0 0 0 0 0   a15 a14 a13 a12 a11 a10 a9 a8    a7 a6 a5 a4 a3 a2 a1 a0   b2 b1 1 1 a9 a8 a7 a6
+    58                                      
+    59                                      
+    60 00000041 B800000000                  MOV EAX, 0
+    61 00000046 A0[02000000]                MOV AL, [b]                ; EAX = 0 0 0 0 0 0 0 0    0 0 0 0 0 0 0 0    0 0 0 0 0 0 0 0    b7 b6 b5 b4 b3 b2 b1 b0
+    62 0000004B B118                        MOV CL, 24
+    63 0000004D D3C0                        ROL EAX, CL                ; rotim 24 poz spre stanga
+    64                                                                 ; EAX = b7 b6 b5 b4 b3 b2 b1 b0    0 0 0 0 0 0 0 0    0 0 0 0 0 0 0 0    0 0 0 0 0 0 0 0
+    65 0000004F 09C3                        OR EBX, EAX                ; punem bitii in rezultat
+    66                                                                 ; EBX = b7 b6 b5 b4 b3 b2 b1 b0   a15 a14 a13 a12 a11 a10 a9 a8    a7 a6 a5 a4 a3 a2 a1 a0   b2 b1 1 1 a9 a8 a7 a6
+    67                                  
+    68 00000051 891D[03000000]              MOV [c], EBX               ; punem rezultatul din registru in variabila rezultat
+    69                                      
+    70                                          ; exit(0)
+    71 00000057 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    72 00000059 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

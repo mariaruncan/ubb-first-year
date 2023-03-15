@@ -1,0 +1,21 @@
+[2021-05-28 19:38:20] [info] Start Program:
+Path:"D:\\Facultate\\Semestrul 2\\Programare Orientata Obiect\\Laborator\\StudySontractGUI\\x64\\Debug\\StudySontractGUI.exe"
+Arguments:
+Working directory: "D:\\Facultate\\Semestrul 2\\Programare Orientata Obiect\\Laborator\\StudySontractGUI\\StudySontractGUI\\"
+Modules: Selected: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudySontractGUI\x64\Debug\StudySontractGUI.exe Excluded: 
+Sources: Selected: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudySontractGUI\StudySontractGUI Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\rmari\AppData\Local\Temp\epykvkdy.c3r 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2021-05-28 19:38:21] [info] Module: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudySontractGUI\x64\Debug\StudySontractGUI.exe is selected because it matches selected pattern: D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\StudySontractGUI\x64\Debug\StudySontractGUI.exe
+[2021-05-28 19:38:21] [info] ----------------------------------------------------
+[2021-05-28 19:38:21] [info] Coverage binary generated in file: C:\Users\rmari\AppData\Local\Temp\epykvkdy.c3r
+[2021-05-28 19:38:21] [info] ----------------------------------------------------

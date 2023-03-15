@@ -1,0 +1,61 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; Se dau 2 siruri de octeti A si B. Sa se construiasca sirul R care sa contina elementele lui B in ordine inversa urmate de elementele in ordine inversa ale lui A.
+    14                                      ; Exemplu:
+    15                                      ; A: 2, 1, -3, 0
+    16                                      ; B: 4, 5, 7, 6, 2, 1
+    17                                      ; R: 1, 2, 6, 7, 5, 4, 0, -3, 1, 2
+    18 00000000 0201FD00                    A db 2, 1, -3, 0
+    19                                      LA equ $-A
+    20 00000004 040507060201                B db 4, 5, 7, 6, 2, 1
+    21                                      LB equ $-B
+    22 0000000A <res 0000000A>              R resb LA+LB
+    23                                  
+    24                                  ; our code starts here
+    25                                  segment code use32 class=code
+    26                                      start:
+    27                                          ; ...
+    28 00000000 BE[09000000]                    MOV ESI, B+LB-1     ; ESI pointeaza spre ultimul elem din B
+    29 00000005 BF[0A000000]                    MOV EDI, R          ; EDI pointeaza spre primul elem din R
+    30 0000000A B906000000                      MOV ECX, LB         ; in ECX avem numarul de pasi
+    31                                          
+    32 0000000F E308                            JECXZ Final_Muta_B
+    33                                          
+    34                                          Muta_B:
+    35 00000011 8A06                                MOV AL, [ESI]
+    36 00000013 8807                                MOV [EDI], AL
+    37 00000015 4E                                  DEC ESI             ; cu ESI mergem invers in B
+    38 00000016 47                                  INC EDI             ; cu EDI mergem normal in R
+    39 00000017 E2F8                            LOOP Muta_B
+    40                                          
+    41                                          Final_Muta_B:
+    42                                          
+    43 00000019 BE[03000000]                    MOV ESI, A+LA-1     ; ESI pointeaza spre ultimul elem din A
+    44                                                              ; EDI pointeaza deja spre pozitia la care am ramas in completarea sirului R
+    45 0000001E B904000000                      MOV ECX, LA         ; in ECX avem numarul de pasi
+    46                                          
+    47 00000023 E308                            JECXZ Final_Muta_A
+    48                                          
+    49                                          Muta_A:
+    50 00000025 8A06                                MOV AL, [ESI]
+    51 00000027 8807                                MOV [EDI], AL
+    52 00000029 4E                                  DEC ESI             ; cu ESI mergem invers in B
+    53 0000002A 47                                  INC EDI             ; cu EDI mergem normal in R
+    54 0000002B E2F8                            LOOP Muta_A
+    55                                          
+    56                                          Final_Muta_A:
+    57                                          
+    58                                      
+    59                                          ; exit(0)
+    60 0000002D 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    61 0000002F FF15[00000000]                  call    [exit]       ; call exit to terminate the program

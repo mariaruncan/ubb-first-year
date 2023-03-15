@@ -1,0 +1,54 @@
+﻿  contract.cpp
+  file_repo.cpp
+  main.cpp
+  repository.cpp
+  service.cpp
+  tests.cpp
+  ui.cpp
+  Running Code Analysis for C/C++...
+  Generating Code...
+  Study_contract.vcxproj -> D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Debug\Study_contract.exe
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\domain.h(37): warning C26432: If you define or delete any default operation in the type 'class Subject', define or delete them all (c.21).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\domain.h(73): warning C26455: Default constructor may not throw. Declare it 'noexcept' (f.6).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\contract.cpp(33): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\contract.cpp(24): warning C26493: Don't use C-style casts (type.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\contract.cpp(31): warning C26493: Don't use C-style casts (type.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\contract.cpp(34): warning C26486: Don't pass a pointer that may be invalid to a function. Parameter 0 '(34's result)' in call to 'std::vector<Subject,std::allocator<Subject> >::erase' may be invalid (lifetime.3).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\file_repo.h(49): warning C26432: If you define or delete any default operation in the type 'class FileRepo', define or delete them all (c.21).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\repository.h(50): warning C26432: If you define or delete any default operation in the type 'class SubjectRepo', define or delete them all (c.21).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\file_repo.cpp(41): warning C26436: The type 'class FileRepo' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\undo.h(41): warning C26432: If you define or delete any default operation in the type 'class Actiune_undo', define or delete them all (c.21).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\service.h(47): warning C26432: If you define or delete any default operation in the type 'class Service', define or delete them all (c.21).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\service.h(48): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\repository.cpp(4): warning C26436: The type 'class SubjectRepo' with a virtual function needs either public virtual or protected non-virtual destructor (c.35).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\repository.cpp(32): warning C26489: Don't dereference a pointer that may be invalid: 'allotemp.7'. '(temporary 7)' may have been invalidated at line 32 (lifetime.1).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\repository.cpp(32): warning C26487: Don't return a pointer '(29's result)' that may be invalid (lifetime.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\service.cpp(8): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\service.cpp(15): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\service.cpp(25): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\service.cpp(63): warning C26440: Function '<lambda_2cc77eed28ad6f84ceeef3b34ba8a229>::operator()' can be declared 'noexcept' (f.6).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\service.cpp(123): warning C26429: Symbol 'act' is never tested for nullness, it can be marked as not_null (f.23).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(56): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(57): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(233): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(234): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(235): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(238): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(239): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(240): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(243): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(244): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(245): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(259): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(260): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(267): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(268): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(301): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(346): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(347): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(348): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(350): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\tests.cpp(353): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\validator.cpp(11): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\validator.cpp(11): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+D:\Facultate\Semestrul 2\Programare Orientata Obiect\Laborator\Study_contract9\Study_contract\validator.cpp(16): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
